@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>Registration form</title>
+</head>
+<body style="background-color:lightyellow;">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<center>
+<font color="black">
+<h1>REGISTRATION FORM </h1>
+</font>
+<table>
+<tr>
+<th>First name</th>
+<td><form action="/action_page.php"><input type="text" name="fn" id="fn1" maxlength="10" title="First name" placeholder="First name" required/></td>
+</tr>
+<tr>
+<th>Last name</th>
+<td><form action="/action_page.php"><input type="text" name="ln" id="ln" maxlength="10" title="Last name" placeholder="Last name" required/></td>
+</tr>
+<tr>
+<th>Address</th>
+<td><textarea rows="4" cols="20"></textarea></td>
+</tr>
+<tr>
+<th>Deptartment</th>
+<td>
+<select name="Deptartment">
+<option value="Computer">Computer</option>
+<option value="Information technology">Information Technology</option>
+<option value="Electronics">Electronics</option>
+</select>
+</td>
+</tr>
+<tr>
+<th>
+<td>
+
+FE<input type="checkbox" name="x[]" value="FE"/> SE<input type="checkbox" name="x[]" value="SE"/>
+TE<input type="checkbox" name="x[]" value="TE"/> BE<input type="checkbox" name="x[]" value="BE"/>
+</th>
+</td>
+
+</tr>
+<tr>
+
+<th>Gender</th>
+
+<td>
+
+male<input type="radio" name="g" value="m"/> female<input type="radio" name="g" value="f"/>
+
+</td>
+</tr>
+<tr>
+<th>Email ID</th>
+<td><input type="email" id="e" required/></td>
+
+</tr>
+<tr>
+
+<th>Enter your mobile</th>
+
+<td><input type="tel" pattern="[0-9]{10}" id="mobileno" required/></td>
+
+</tr>
+<tr>
+<th>Pincode</th>
+<td><input type="tel" pattern="[0-9]{6}" id="pin" required/></td>
+</tr>
+<tr>
+<th>Password</th>
+<td><input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required></td>
+</tr>
+<tr>
+<th>
+<div id="message">
+<td><p><font size="1" color="red">It should contain lowercase, Uppercase, number and characters min. length should 8</p></font></td>
+</div>
+</th>
+</tr>
+</table>
+<button onclick="myalert()"> submit</button>
+<script>
+function myalert()
+{
+if(fn1.value == "" ) return(false);
+if(ln.value == "" ) return(false);
+if(e.value == "" ) return(false);
+if(mobileno.value == "" ) return(false);
+if(password.value == "" ) return(false);
+else
+alert("Registration Sucessfully");
+}
+</script>
+</center>
+
+</form>
+
+</body>
+
+</html>
